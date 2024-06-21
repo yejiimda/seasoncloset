@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>season closet</title>
+
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: rgb(255, 236, 150);
+    }
+    #logo {
+        width: 200px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    
+    .base-container {
+        position: relative;
+        width: 1350px;
+        height: 800px;
+        
+    }
+    .base-container img {
+        width: 100%;
+        height: auto;
+    }
+    .clothes-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        pointer-events: none;
+    }
+    .clothes {
+        width: 190px;
+        height: 250px;
+        touch-action: none;
+        user-select: none;
+        pointer-events: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        padding-top: 20px;
+        left: 1000px; /* 초기 위치 설정 */
+    }
+    .clothes-bottom {
+        width: 180px;
+        height: 250px;
+        touch-action: none;
+        user-select: none;
+        pointer-events: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 300px; /* 초기 위치 설정 */
+        right: 1000px; /* 초기 위치 설정 */
+    }
+    .clothes-shoes {
+        width: 179px;
+        height: 150px;
+        touch-action: none;
+        user-select: none;
+        pointer-events: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 600px; /* 초기 위치 설정 */
+        left: 1000px; /* 초기 위치 설정 */
+    }
+    .clothes img {
+        max-width: 100%;
+        max-height: 80%;
+        object-fit: contain;
+    }
+    .clothes-bottom img {
+        max-width: 90%;
+        max-height: 80%;
+        object-fit: contain;
+    }
+    .clothes-shoes img {
+        max-width: 89%;
+        max-height: 55%;
+        object-fit: contain;
+    }
+ .icon {
+    width: 90px;
+    height: 90px;
+    margin-left: 150px;
+    padding: 20px;
+    margin: 10px 0; /* 상하 여백 200px 설정 */
+    transition: transform 0.3s ease-in-out; /* 애니메이션 설정 */
+    margin-left: 50px; /* 아이콘을 아래로 10px 내립니다. */
+}
+.info-icon {
+    position: fixed;
+    top: 60px; /* 화면 위에서 20px 떨어진 위치 */
+    left: 1550px; /* 화면 오른쪽에서 20px 떨어진 위치 */
+    width: 35px; /* 이미지의 너비 */
+    height: auto; /* 이미지의 높이 자동 조정 */
+    z-index: 9999; /* 다른 요소들보다 위에 표시 */
+}
+    .icon:hover {
+        transform: scale(1.1); /* 호버 시 이미지 확대 */
+    }
+    .icon-container {
+        position: absolute;
+        left: 20px;
+        top: 50%; /* 화면 중앙에 배치 */
+        transform: translateY(-50%); /* 수직 중앙 정렬 */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+</style>
+</head>
+<body>
+    <a href="../2024_webdesign/season closet 0p.html">
+        <img id="logo" src="../2024_webdesign/logo.png" alt="logo">
+    </a>
+    <div class="base-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="../2024_webdesign/base_m.png" alt="base">
+
+        <div class="clothes-container">
+            <div id="dragImage1" class="clothes" draggable="true" style="left: 485px;" >
+                <img src="../2024_webdesign/cloth/top/반팔.png" alt="hood" style="width: 70%; height: 70%;">
+            </div>
+            <div id="dragImage2" class="clothes" draggable="true" style="left: 700px;">
+                <img src="../2024_webdesign/cloth/top/sumshirt_male.png" alt="sleeve" style="width: 80%; height: 80%;">
+            </div>
+            <div id="dragImage3" class="clothes" draggable="true" style="left: 910px;">
+                <img src="../2024_webdesign/cloth/top/카라티.png" alt="cardigan" style="width: 70%; height: 70%;">
+            </div>
+            <div id="dragImage4" class="clothes" draggable="true" style="left: 1130px;">
+                <img src="../2024_webdesign/cloth/top/나시_M.png" alt="shirt" style="width: 60%; height: 60%;">
+            </div>
+            <div id="dragImage5" class="clothes-bottom" draggable="true" style="left: 500px; top: 260px;">
+                <img src="../2024_webdesign/cloth/bottom/midipn_bl.png" alt="pants" style="width: 75%; height: 75%;">
+            </div>
+            <div id="dragImage6" class="clothes-bottom" draggable="true" style="left: 700px; top: 260px;">
+                <img src="../2024_webdesign/cloth/bottom/midipn_jean.png" alt="pants" style="width: 75%; height: 75%;">
+            </div>
+            <div id="dragImage7" class="clothes-bottom" draggable="true" style="left: 910px; top: 260px;">
+                <img src="../2024_webdesign/cloth/bottom/midipn.png" alt="pants" style="width: 75%; height: 75%;">
+            </div>
+            <div id="dragImage8" class="clothes-bottom" draggable="true" style="left: 1130px; top: 260px;">
+                <img src="../2024_webdesign/cloth/bottom/long_jean.png" alt="pants">
+            </div>
+            <div id="dragImage9" class="clothes-shoes" draggable="true" style="left: 490px; top: 530px;">
+                <img src="../2024_webdesign/cloth/shoes/운동화_white 복사.png" alt="shoes">
+            </div>
+            <div id="dragImage10" class="clothes-shoes" draggable="true" style="left: 700px; top: 530px;">
+                <img src="../2024_webdesign/cloth/shoes/운동화_bl 복사.png " alt="shoes">
+            </div>
+            <div id="dragImage11" class="clothes-shoes" draggable="true" style="left: 920px; top: 530px;">
+                <img src="../2024_webdesign/cloth/shoes/zzori_black 복사.png " alt="shoes">
+            </div>
+            <div id="dragImage12" class="clothes-shoes" draggable="true" style="left: 1130px; top: 530px;">
+                <img src="../2024_webdesign/cloth/acc/socks.png " alt="shoes" style="max-width: 90%; max-height: 90%;">
+            </div>
+        </div>
+    </div>
+    <div class="icon-container">
+        <a href="../2024_webdesign/season closet m_spring.html">
+            <img class="icon play-icon" src="../2024_webdesign/spring_icon.png" alt="봄">
+        </a>
+        <a href="../2024_webdesign/season closet m_summer.html">
+            <img class="icon play-icon" src="../2024_webdesign/summer_icon.png" alt="여름">
+        </a>
+        <a href="../2024_webdesign/season closet m_fall.html">
+            <img class="icon play-icon" src="../2024_webdesign/fall_icon.png" alt="가을">
+        </a>
+        <a href="../2024_webdesign/season closet m_winter.html">
+        <img class="icon play-icon" src="../2024_webdesign/winter_icon.png" alt="겨울">
+ </a>
+ <a href="../2024_webdesign/season closet 사용.html">
+    <img class="info-icon" src="../2024_webdesign/물음표.png" alt="설명">
+</a>
+</div>
+<script>
+    let highestZIndex = 1;
+    const dragItems = document.querySelectorAll(".clothes, .clothes-bottom, .clothes-shoes");
+
+    dragItems.forEach(dragItem => {
+        let active = false;
+        let currentX;
+        let currentY;
+        let initialX;
+        let initialY;
+        let xOffset = 0;
+        let yOffset = 0;
+
+        // Touch events
+        dragItem.addEventListener("touchstart", dragStart, false);
+        dragItem.addEventListener("touchend", dragEnd, false);
+        dragItem.addEventListener("touchmove", drag, false);
+
+        // Mouse events
+        dragItem.addEventListener("mousedown", dragStart, false);
+        dragItem.addEventListener("mouseup", dragEnd, false);
+        dragItem.addEventListener("mousemove", drag, false);
+
+        function dragStart(e) {
+            e.preventDefault(); // Prevent default action for touch events
+
+            if (e.type === "touchstart") {
+                initialX = e.touches[0].clientX - xOffset;
+                initialY = e.touches[0].clientY - yOffset;
+            } else {
+                initialX = e.clientX - xOffset;
+                initialY = e.clientY - yOffset;
+            }
+
+            if (e.target === dragItem || e.target.tagName === 'IMG') {
+                active = true;
+                dragItem.style.zIndex = ++highestZIndex; // Ensure dragged item is on top
+            }
+        }
+
+        function dragEnd(e) {
+            active = false;
+        }
+
+        function drag(e) {
+            if (active) {
+                e.preventDefault(); // Prevent default action for touch events
+
+                if (e.type === "touchmove") {
+                    currentX = e.touches[0].clientX - initialX;
+                    currentY = e.touches[0].clientY - initialY;
+                } else {
+                    currentX = e.clientX - initialX;
+                    currentY = e.clientY - initialY;
+                }
+
+                xOffset = currentX;
+                yOffset = currentY;
+
+                setTranslate(currentX, currentY, dragItem);
+            }
+        }
+
+        function setTranslate(xPos, yPos, el) {
+            el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+        }
+    });
+
+    function allowDrop(event) {
+        event.preventDefault();
+    }
+
+    function drop(event) {
+        event.preventDefault();
+    }
+</script>
+</body>
+</html>

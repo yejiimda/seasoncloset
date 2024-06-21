@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택창</title>
+    <style>
+        .background {
+            width: 1600px;
+            height: 900px;
+            background-image: url('../2024_webdesign/Home (2).png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            flex-direction: column;
+        }
+        .icons {
+            display: flex; /* 플렉스박스로 설정 */
+            justify-content: center; /* 수평 정렬 */
+            align-items: center; /* 수직 정렬 */
+            flex-direction: column;
+        }
+        .icon {
+            transition: transform 0.3s ease-in-out; /* 애니메이션 설정 */
+        }
+        .icon:hover {
+            transform: scale(1.1); /* 호버 시 이미지 확대 */
+        }
+        .play-icon {
+            width: 190px;
+            height: 150px;
+            
+        }
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            margin-top: 600px; /* 수정: 느낌표 이미지를 아래로 이동 */
+        }
+        body {
+            background-color: rgb(255, 236, 150); /* 배경색 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh; /* 화면 전체 높이 설정 */
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="icons">
+            <a href="../2024_webdesign/season closet 추천.html">
+                <img class="icon info-icon" src="../2024_webdesign/느낌표.png" alt="추천">
+            </a>
+            <a href="../2024_webdesign/season closet 1p.html">
+                <img class="icon play-icon" src="../2024_webdesign/play.png" alt="시작">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
